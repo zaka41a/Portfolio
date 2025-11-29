@@ -1,0 +1,26 @@
+<svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="480" rx="120" fill="url(#paint0_radial)" />
+  <g opacity="0.35">
+    <path d="M0 60H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M0 120H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M0 180H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M0 240H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M0 300H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M0 360H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M0 420H480" stroke="white" stroke-opacity="0.25" />
+    <path d="M60 0L60 480" stroke="white" stroke-opacity="0.25" />
+    <path d="M120 0L120 480" stroke="white" stroke-opacity="0.25" />
+    <path d="M180 0L180 480" stroke="white" stroke-opacity="0.25" />
+    <path d="M240 0L240 480" stroke="white" stroke-opacity="0.25" />
+    <path d="M300 0L300 480" stroke="white" stroke-opacity="0.25" />
+    <path d="M360 0L360 480" stroke="white" stroke-opacity="0.25" />
+    <path d="M420 0L420 480" stroke="white" stroke-opacity="0.25" />
+  </g>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(96 96) rotate(54.1) scale(460)">
+      <stop stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="0.55" stop-color="#8b5cf6" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#050816" stop-opacity="0.95" />
+    </radialGradient>
+  </defs>
+</svg>
