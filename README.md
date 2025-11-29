@@ -9,7 +9,7 @@
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[🌐 Live Demo](https://your-portfolio-url.vercel.app) • [📧 Contact](mailto:zaksab98@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/zakaria-sabiri-8a97b4364/)
+[🌐 Live Demo](https://portfolio-chi-jade-amtmuskqay.vercel.app) • [📧 Contact](mailto:zaksab98@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/zakaria-sabiri-8a97b4364/)
 
 ---
 
