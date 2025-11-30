@@ -28,15 +28,6 @@ A modern, minimalist portfolio showcasing my journey as a Full-Stack Software En
 
 ---
 
-## 🎬 Preview
-
-> _Add screenshots of your portfolio here once deployed_
-
-```
-Screenshots coming soon after deployment!
-```
-
----
 
 ## 🛠️ Tech Stack
 
@@ -111,45 +102,7 @@ portfolio/
 └── styles/               # Global styles
 ```
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/zaka41a/Portfolio.git
-   cd Portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open browser**
-   ```
-   Navigate to http://localhost:3000
-   ```
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
----
+--- 
 
 ## 🎯 Featured Projects
 
@@ -202,30 +155,6 @@ Transform raw text into interactive knowledge graphs using Ollama LLM + Neo4j
 
 ---
 
-## 🎨 Customization
-
-### Update Projects
-Edit `data/projects.ts` to add or modify projects:
-
-```typescript
-{
-  title: 'Your Project',
-  description: 'Project description...',
-  tags: ['React', 'Node.js'],
-  linkGithub: 'https://github.com/username/repo',
-  linkLive: 'https://your-demo.vercel.app',
-  featured: true,
-}
-```
-
-### Update CV
-Replace `public/Zakaria_Sabiri_CV.pdf` with your updated CV
-
-### Add Images
-Add visuals to `public/images/` and reference them in components
-
----
-
 ## 📬 Contact
 
 **Zakaria Sabiri**
@@ -246,7 +175,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### 🌟 If you like this portfolio, give it a star!
 
-**Built with ❤️ by Zakaria Sabiri**
+**Built by Zaka41a **
 
 </div>
 
