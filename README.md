@@ -175,7 +175,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### 🌟 If you like this portfolio, give it a star!
 
-**Built by Zaka41a **
+** Built by Zaka41a **
 
 </div>
 
