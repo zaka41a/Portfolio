@@ -21,6 +21,14 @@ export const projects = [
     featured: true,
   },
   {
+    title: 'BiblioSmart',
+    description:
+      '✨ Premium library SaaS platform with React/Vite frontend, Express + Prisma API, JWT auth, analytics dashboards, and Stripe-ready multi-tenant architecture.',
+    tags: ['React', 'Express', 'Prisma', 'PostgreSQL', 'SaaS'],
+    linkGithub: 'https://github.com/zaka41a/BiblioSmart',
+    featured: true,
+  },
+  {
     title: 'MyGym',
     description: 'A PHP application for managing gym members, subscriptions, and activities.',
     tags: ['PHP', 'MySQL'],

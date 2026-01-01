@@ -3,43 +3,63 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import SectionHeading from './ui/section-heading'
-import { Code2, Layers, Gauge, Sparkles } from 'lucide-react'
+import { Code2, Layers, Gauge, Sparkles, BookOpen } from 'lucide-react'
 
 const quickFacts = [
   { label: 'Clean architecture', icon: Layers },
-  { label: 'Scalable APIs', icon: Code2 },
-  { label: 'Product-centric', icon: Sparkles },
-  { label: 'Quality-first', icon: Gauge },
-  { label: 'Mentoring teams', icon: Sparkles },
+  { label: 'REST API design', icon: Code2 },
+  { label: 'Type-safe development', icon: Sparkles },
+  { label: 'Security-first approach', icon: Gauge },
+  { label: 'Full-stack ownership', icon: BookOpen },
 ]
 
 const timeline = [
   {
-    title: 'Discovery & Strategy',
-    content: 'Rapid discovery, product scoping, MVP vs. long-term vision.',
+    title: 'Requirements Analysis',
+    content: 'Understanding user needs, defining scope, and choosing appropriate tech stack.',
   },
   {
-    title: 'Clean Architecture',
-    content: 'Modular design, documentation, and technical reviews.',
+    title: 'Architecture & Design',
+    content: 'Database schema, API endpoints, component structure, and authentication flow.',
   },
   {
-    title: 'Delivery & Measurement',
-    content: 'Incremental implementation, testing, instrumentation, and feedback.',
+    title: 'Implementation & Testing',
+    content: 'Incremental development, manual testing, deployment, and documentation.',
   },
 ]
 
 export default function AboutSection() {
   return (
     <section id="about" className="section-wrapper mx-auto w-[min(1100px,92vw)] py-16">
+      {/* Banner cybertech avant le heading */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mb-12 overflow-hidden rounded-[40px] border border-white/20 shadow-[0_30px_90px_rgba(0,0,0,0.5)]"
+      >
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#C084FC]/20 via-transparent to-[#9333EA]/10 blur-2xl" />
+          <Image
+            src="/images/cybertech-bannerV.png"
+            alt="Zakaria Sabiri - Full-Stack Developer Tech Stack"
+            width={1374}
+            height={578}
+            className="relative z-10 w-full h-auto"
+          />
+        </div>
+      </motion.div>
+
       <SectionHeading
         eyebrow="About"
         title={
           <>
-            Engineering clarity, <span className="text-[#C084FC]">performance</span> and{' '}
-            <span className="text-[#C084FC]">future-ready</span> systems.
+            Building <span className="text-[#C084FC]">maintainable</span>,{' '}
+            <span className="text-[#C084FC]">scalable</span> applications.
           </>
         }
-        description="I build platforms that combine business requirements, software quality, and scalability. Passionate about clean architectures, testing, and continuous monitoring."
+        description="I develop full-stack web applications from database design to responsive UI, applying software engineering principles and modern tooling."
       />
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <motion.div
@@ -64,10 +84,10 @@ export default function AboutSection() {
                 <p className="mt-1 text-base text-white/60">Dual Math & CS · FH Aachen</p>
               </div>
             </div>
-            <p className="text-xl leading-relaxed text-white/80">
-              With a dual background in mathematics and computer science, I love transforming ideas into tangible
-              systems. I navigate between <span className="text-[#C084FC]">infrastructure</span>, <span className="text-[#C084FC]">backend</span>, and{' '}
-              <span className="text-[#C084FC]">frontend</span> to ensure consistency, performance, and premium UX.
+            <p className="text-xl leading-relaxed text-white/90">
+              Dual major in Mathematics and Computer Science at FH Aachen. I build full-stack applications
+              from database schema to responsive UI, combining <span className="text-[#C084FC]">analytical thinking</span> from
+              mathematics with <span className="text-[#C084FC]">practical engineering</span> from computer science.
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {timeline.map((step) => (
@@ -87,7 +107,7 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           className="rounded-[32px] border border-white/20 bg-[#08080f] p-8 shadow-[0_35px_120px_rgba(0,0,0,0.6)]"
         >
-          <p className="text-sm uppercase tracking-[0.35em] text-white/45">Quick facts</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-white/45">Core Strengths</p>
           <ul className="mt-5 space-y-3">
             {quickFacts.map(({ label, icon: Icon }) => (
               <li
@@ -103,9 +123,10 @@ export default function AboutSection() {
           </ul>
           <div className="group relative mt-8 rounded-2xl border border-white/25 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 text-white backdrop-blur-sm transition-all hover:border-[#C084FC]/60 hover:shadow-[0_0_25px_rgba(192,132,252,0.2)]">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#C084FC]/0 to-[#C084FC]/0 opacity-0 transition-opacity group-hover:from-[#C084FC]/10 group-hover:to-transparent group-hover:opacity-100" />
-            <p className="relative text-sm uppercase tracking-[0.3em] text-[#C084FC] font-semibold mb-2">Approach</p>
+            <p className="relative text-sm uppercase tracking-[0.3em] text-[#C084FC] font-semibold mb-2">Development Approach</p>
             <p className="relative mt-2 text-base text-white/85 leading-relaxed">
-              Rapid discovery, prototyping, architecture, incremental implementation, continuous usage measurement.
+              Requirements analysis, technical design, incremental implementation with Git version control,
+              manual testing, and comprehensive documentation.
             </p>
           </div>
         </motion.div>

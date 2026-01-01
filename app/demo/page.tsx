@@ -3,10 +3,13 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { projects } from '@/data/projects'
-import { ExternalLink, Github, Rocket, Sparkles, Code2, Zap } from 'lucide-react'
+import { ExternalLink, Github, Folder, Layers, Zap } from 'lucide-react'
 
 export default function DemoPage() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
+  const featuredCount = projects.filter((p) => 'featured' in p && p.featured).length
+  const liveCount = projects.filter((p) => 'linkLive' in p && p.linkLive).length
 
   return (
     <div className="relative min-h-screen">
@@ -27,31 +30,31 @@ export default function DemoPage() {
           >
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#C084FC]/40 bg-[#C084FC]/10 px-6 py-3 backdrop-blur-sm">
-              <Sparkles className="h-5 w-5 text-[#C084FC] animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#C084FC]">Project Showcase</span>
+              <Folder className="h-5 w-5 text-[#C084FC]" />
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#C084FC]">Project Portfolio</span>
             </div>
 
             {/* Main Title */}
             <h1 className="mb-6 bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-6xl font-bold leading-tight text-transparent md:text-7xl">
-              Interactive Demo
+              Full-Stack
               <br />
               <span className="bg-gradient-to-r from-[#C084FC] via-[#9333EA] to-[#C084FC] bg-clip-text">
-                Experience
+                Applications
               </span>
             </h1>
 
             {/* Description */}
             <p className="mx-auto mb-10 max-w-3xl text-xl leading-relaxed text-white/75">
-              Explore a curated collection of my featured projects. Each one showcases different technologies,
-              architectural patterns, and problem-solving approaches. Click the buttons below to dive into the code
-              or experience the live demos.
+              Production-ready applications demonstrating full-stack development capabilities, from database design
+              to frontend UI. Each project showcases specific technical challenges, architectural decisions, and
+              implementation patterns.
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap items-center justify-center gap-8">
               <div className="flex items-center gap-3">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#C084FC]/30 bg-gradient-to-br from-[#C084FC]/20 to-[#C084FC]/5 shadow-[0_0_30px_rgba(192,132,252,0.3)]">
-                  <Rocket className="h-7 w-7 text-[#C084FC]" />
+                  <Folder className="h-7 w-7 text-[#C084FC]" />
                 </div>
                 <div className="text-left">
                   <p className="text-3xl font-bold text-white">{projects.length}</p>
@@ -63,11 +66,11 @@ export default function DemoPage() {
 
               <div className="flex items-center gap-3">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#C084FC]/30 bg-gradient-to-br from-[#C084FC]/20 to-[#C084FC]/5 shadow-[0_0_30px_rgba(192,132,252,0.3)]">
-                  <Code2 className="h-7 w-7 text-[#C084FC]" />
+                  <Layers className="h-7 w-7 text-[#C084FC]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-3xl font-bold text-white">{projects.filter((p) => 'featured' in p && p.featured).length}</p>
-                  <p className="text-sm text-white/60">Featured</p>
+                  <p className="text-3xl font-bold text-white">{featuredCount}</p>
+                  <p className="text-sm text-white/60">Featured Projects</p>
                 </div>
               </div>
 
@@ -78,8 +81,8 @@ export default function DemoPage() {
                   <Zap className="h-7 w-7 text-[#C084FC]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-3xl font-bold text-white">{projects.filter((p) => 'linkLive' in p && p.linkLive).length}</p>
-                  <p className="text-sm text-white/60">Live Demos</p>
+                  <p className="text-3xl font-bold text-white">{liveCount}</p>
+                  <p className="text-sm text-white/60">Live Deployments</p>
                 </div>
               </div>
             </div>
@@ -89,9 +92,11 @@ export default function DemoPage() {
 
       {/* Projects Grid */}
       <section className="mx-auto w-[min(1100px,92vw)] pb-20">
-        <div className="mb-10 text-center">
-          <h2 className="mb-3 text-4xl font-bold text-white">All Projects</h2>
-          <p className="text-lg text-white/60">Click on GitHub or Demo buttons to explore</p>
+        <div className="mb-10">
+          <h2 className="mb-3 text-4xl font-bold text-white">Complete Project List</h2>
+          <p className="text-lg text-white/70">
+            Click <span className="text-[#C084FC]">GitHub</span> to view source code or <span className="text-[#C084FC]">Demo</span> to access live deployments
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -122,7 +127,7 @@ export default function DemoPage() {
               {'featured' in project && project.featured && (
                 <div className="absolute right-6 top-6">
                   <div className="inline-flex items-center gap-1.5 rounded-full border border-[#C084FC]/40 bg-[#C084FC]/15 px-3 py-1.5 backdrop-blur-sm">
-                    <Sparkles className="h-3.5 w-3.5 text-[#C084FC]" />
+                    <Layers className="h-3.5 w-3.5 text-[#C084FC]" />
                     <span className="text-xs font-bold uppercase tracking-wider text-[#C084FC]">Featured</span>
                   </div>
                 </div>
@@ -130,7 +135,7 @@ export default function DemoPage() {
 
               {/* Icon */}
               <div className="relative mb-6 inline-flex h-20 w-20 items-center justify-center rounded-[24px] border border-[#C084FC]/40 bg-gradient-to-br from-[#C084FC]/30 to-[#C084FC]/10 shadow-[0_0_40px_rgba(192,132,252,0.3)] transition-all group-hover:scale-110 group-hover:shadow-[0_0_60px_rgba(192,132,252,0.5)]">
-                <Code2 className="h-10 w-10 text-[#C084FC]" />
+                <Folder className="h-10 w-10 text-[#C084FC]" />
               </div>
 
               {/* Title */}
