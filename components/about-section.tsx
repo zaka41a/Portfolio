@@ -91,10 +91,10 @@ export default function AboutSection() {
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {timeline.map((step) => (
-                <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-white/25 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 backdrop-blur-sm transition-all hover:border-[#C084FC]/60 hover:shadow-[0_0_25px_rgba(192,132,252,0.2)]">
+                <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-white/25 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 backdrop-blur-sm transition-all hover:border-[#C084FC]/60 hover:shadow-[0_0_25px_rgba(192,132,252,0.2)] h-full flex flex-col">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#C084FC]/0 to-[#C084FC]/0 opacity-0 transition-opacity group-hover:from-[#C084FC]/10 group-hover:to-transparent group-hover:opacity-100" />
                   <p className="relative text-sm uppercase tracking-[0.25em] text-[#C084FC] font-semibold mb-2 break-words">{step.title}</p>
-                  <p className="relative mt-2 text-sm text-white/85 leading-relaxed break-words">{step.content}</p>
+                  <p className="relative mt-2 text-sm text-white/85 leading-relaxed break-words flex-1">{step.content}</p>
                 </div>
               ))}
             </div>

@@ -268,9 +268,9 @@ export default function DemoPage() {
                       href={project.linkGithub}
                       target="_blank"
                       rel="noreferrer"
-                      className="group/btn flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#C084FC]/50 hover:bg-[#C084FC]/10 hover:shadow-[0_0_25px_rgba(192,132,252,0.3)]"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-[#C084FC]/50 hover:bg-[#C084FC]/10 hover:shadow-[0_0_25px_rgba(192,132,252,0.3)]"
                     >
-                      <Github className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
+                      <Github className="h-4 w-4" />
                       <span>Code</span>
                     </a>
                   )}
@@ -279,9 +279,9 @@ export default function DemoPage() {
                       href={project.linkLive}
                       target="_blank"
                       rel="noreferrer"
-                      className="group/btn flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#9333EA] px-4 py-3 text-sm font-semibold text-white shadow-[0_0_25px_rgba(192,132,252,0.4)] transition-all hover:shadow-[0_0_40px_rgba(192,132,252,0.6)] hover:scale-105"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#C084FC] to-[#9333EA] px-4 py-3 text-sm font-semibold text-white shadow-[0_0_25px_rgba(192,132,252,0.4)] transition-all hover:shadow-[0_0_40px_rgba(192,132,252,0.6)]"
                     >
-                      <ExternalLink className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                      <ExternalLink className="h-4 w-4" />
                       <span>Demo</span>
                     </a>
                   )}
