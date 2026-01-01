@@ -4,8 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-
-const navLinks = [{ label: 'Demo', href: '#demo' }]
+import { User, FolderOpen, Sparkles, Download } from 'lucide-react'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -32,31 +31,46 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-3 md:flex">
+          {/* About - User Icon */}
           <a
             href="/#about"
-            className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-[#C084FC] hover:bg-[#C084FC]/10 hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]"
+            className="group flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 transition hover:border-[#C084FC] hover:bg-[#C084FC]/10 hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]"
+            title="About"
           >
-            About
+            <User className="h-5 w-5 text-[#C084FC] transition-transform group-hover:scale-110" strokeWidth={2.5} />
+            <span className="text-sm font-semibold text-white">About</span>
           </a>
+
+          {/* Projects - Folder Icon */}
           <a
             href="/#projects"
-            className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-[#C084FC] hover:bg-[#C084FC]/10 hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]"
+            className="group flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 transition hover:border-[#C084FC] hover:bg-[#C084FC]/10 hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]"
+            title="Projects"
           >
-            Projects
+            <FolderOpen className="h-5 w-5 text-[#C084FC] transition-transform group-hover:scale-110" strokeWidth={2.5} />
+            <span className="text-sm font-semibold text-white">Projects</span>
           </a>
+
+          {/* Demo - Sparkles Icon */}
           <a
             href="/demo"
-            className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-[#C084FC] hover:bg-[#C084FC]/10 hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]"
+            className="group flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 transition hover:border-[#C084FC] hover:bg-[#C084FC]/10 hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]"
+            title="Demo"
           >
-            Demo
+            <Sparkles className="h-5 w-5 text-[#C084FC] transition-transform group-hover:rotate-12" strokeWidth={2.5} />
+            <span className="text-sm font-semibold text-white">Demo</span>
           </a>
+
+          {/* Download CV */}
           <a
             href="/Zakaria_Sabiri_CV.pdf"
-            className="rounded-full bg-gradient-to-r from-[#C084FC] to-[#9333EA] px-5 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(192,132,252,0.4)] transition hover:shadow-[0_0_30px_rgba(192,132,252,0.6)] hover:scale-105"
+            className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C084FC] to-[#9333EA] px-5 py-2 shadow-[0_0_20px_rgba(192,132,252,0.4)] transition hover:shadow-[0_0_30px_rgba(192,132,252,0.6)] hover:scale-105"
             target="_blank"
             rel="noreferrer"
+            title="Download CV"
           >
-            Download CV
+            <Download className="h-4 w-4 text-white transition-transform group-hover:translate-y-0.5" strokeWidth={2.5} />
+            <span className="text-sm font-semibold text-white">Download CV</span>
           </a>
         </div>
       </div>
