@@ -89,7 +89,7 @@ export default function AboutSection() {
               from database schema to responsive UI, combining <span className="text-[#C084FC]">analytical thinking</span> from
               mathematics with <span className="text-[#C084FC]">practical engineering</span> from computer science.
             </p>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-8 grid grid-cols-3 gap-4">
               {timeline.map((step) => (
                 <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-white/25 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 backdrop-blur-sm transition-all hover:border-[#C084FC]/60 hover:shadow-[0_0_25px_rgba(192,132,252,0.2)] h-full flex flex-col">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#C084FC]/0 to-[#C084FC]/0 opacity-0 transition-opacity group-hover:from-[#C084FC]/10 group-hover:to-transparent group-hover:opacity-100" />
